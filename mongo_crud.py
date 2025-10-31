@@ -43,9 +43,9 @@ elif choice=="Read":
         else:
             for user in data_read:
                 st.markdown(f"Name : {user['name']} | Emaail : {user['email']}")
-                colm = st.columns(5)
+                colm = st.columns(4)
                 for i,img_get in enumerate(user.get("image",[])):
-                    with colm(i%5):
+                    with colm(i%4):
                         st.image(binary_image(img_get), width=150)
             
 elif choice=="Update":
@@ -88,3 +88,4 @@ elif choice=="Delete":
 
 
                            
+
