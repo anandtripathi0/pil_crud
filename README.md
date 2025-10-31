@@ -4,13 +4,12 @@
 This project is a Streamlit-based web app that performs full CRUD (Create, Read, Update, Delete) operations using MongoDB Atlas as the database.              
 Users can create profiles with name, email, and multiple image uploads (stored as BSON binary data).                                              
 
-🧠 Tech Stack:-
-Frontend - Streamlit
-Backend -	Python
-Database - MongoDB Atlas (NoSQL)
-Image Handling - Pillow (PIL) + BSON Binary
-Cloud Deployment - Streamlit Cloud
-
+🧠 Tech Stack:- 
+Frontend - Streamlit                                                                                                                                                  
+Backend -	Python                                                                                                                                                  
+Database - MongoDB Atlas (NoSQL)                                                                                                                                    
+Image Handling - Pillow (PIL) + BSON Binary                                                                                                                          
+Cloud Deployment - Streamlit Cloud                                                                                                                                      
 ⚙️ Project Structure:-                                                                                                                      
 📂 crud_straemlit/                                             
 │                                                                                                                                    
