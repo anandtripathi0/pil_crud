@@ -57,18 +57,21 @@ elif choice=="Update":
     else:
         if names:
             select=st.selectbox("Select user",names)
-            new_name=st.text_input("ENTER NAME ")
-            new_email=st.text_input("ENTER EMAIL")
+            current_user = collection.find_one({"name": select})
+            new_name=st.text_input("ENTER NAME ", value=current_user["name"])
+            new_email=st.text_input("ENTER EMAIL", value=current_user["email"])
             new_image=st.file_uploader("Update images ",accept_multiple_files=True,type=['jpg','jpeg','png','pdf'])
             if st.button("Update"):
                 update_data={}
                 if new_name and new_email and new_image:
-                    update_data['name']=new_name
-                    update_data['email']=new_email
-                    update_data['image']=[image_binary(img) for img in new_image]
-                    if update_data:
-                        collection.update_one({"$set": update_data})
-                        st.success("User data successfully updated")
+                    update_data["name"]=new_name
+                    update_data["email"]=new_email
+                    update_data["image"]=[image_binary(img) for img in new_image]
+                if update_data:
+                    collection.update_one({"name": select},{"$set": update_data})
+                    st.success("User data successfully updated")
+                else:
+                    st.warning("No updates provided.")
                 
 elif choice=="Delete":
     st.subheader("--DELETE YOUR USER DATA--")
@@ -88,4 +91,5 @@ elif choice=="Delete":
 
 
                            
+
 
