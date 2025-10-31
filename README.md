@@ -9,7 +9,9 @@ Frontend - Streamlit
 Backend -	Python                                                                                                                                                  
 Database - MongoDB Atlas (NoSQL)                                                                                                                                    
 Image Handling - Pillow (PIL) + BSON Binary                                                                                                                          
-Cloud Deployment - Streamlit Cloud                                                                                                                                      
+Cloud Deployment - Streamlit Cloud                                                                                                                                     
+
+
 ⚙️ Project Structure:-                                                                                                                      
 📂 crud_straemlit/                                             
 │                                                                                                                                    
